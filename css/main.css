@@ -2,6 +2,9 @@
     box-shadow: 2px 2px 5px #000;
     opacity: .9;
 }
+#navig{
+    background-color:#6F1E51;
+}
 .navbar .nav-item .nav-link{
    color: #fff;
 }
@@ -22,6 +25,6 @@
 .form-control-lg, .btn{
     border-radius: 0;
 }
-.team{
+.team, footer{
     background: #1B1464;
 }

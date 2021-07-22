@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Creacion del Navbar con bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navig">
      <div class="container">
         <a class="navbar-brand" href="/">
             <img src="img/Logo.png" alt="Logo Chronoded" style="width: 15%;">
@@ -25,14 +25,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link" href="#team">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -122,7 +122,7 @@
     </section>
 
     <!-- About -->
-    <section class="bg-light text-center">
+    <section class="bg-light text-center" id="about">
         <div class="container">
             <div class="row">
                 <div class="m-5">
@@ -199,7 +199,7 @@
     </section>
 
     <!-- Equipo -->
-    <section class="team text-center">
+    <section class="team text-center" id="team">
         <div class="container py-5">
             <h1 class="text-white"> Team</h1>
             <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, laudantium.</p>
@@ -208,7 +208,7 @@
                 <div class="col-lg-3">
                     <div class="card">
                         <div class="card-body">
-                            <img src="img/Yo.jpeg" class="img-fluid rounded-circle w-50" alt="Oliver Acosta ">
+                            <img src="img/Yo.jpeg" class="img-fluid rounded-circle w-50" alt="Oliver Acosta ">    <!--  (img fluid para ResDign, rounded-circle para img circular, w= width) -->
                             <h3>Oliver Acosta </h3>
                             <p>El carnal se rifa haciendo paginas webs y jugando jueguitos</p>
                             <div class="d-flex flex-row justify-content-center">
@@ -313,6 +313,52 @@
         </div>
 
     </section>
+
+    <!-- Contacto -->
+    <!-- El input group es una clase de bootstrap para estilizar el form con iconos utilizar el preprend mb=margin bottom -->
+    <section class="bg-light py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h3>Contacto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis!</p>
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <i class="fas fa-user input-group-text"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Name"> 
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <i class="fas fa-envelope input-group-text"></i>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email"> 
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <i class="fas fa-comment-alt input-group-text"></i>
+                            </div>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your message" class="form-control"></textarea>
+                        </div>
+                        <button class="btn-primary btn-lg btn-block">
+                            send your message
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-3 align-self-center" >
+                    <img src="img/Logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container p-3 text-white text-center">
+        <p>Copyright &copy; 2021 </p>
+    </div>
+    </footer>   
 
 
 
