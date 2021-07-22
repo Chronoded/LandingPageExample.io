@@ -4,10 +4,206 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agregamos el link de bootstrap para styles principalmente poner primero que el link del css tuyo-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    <title></title>
+    <title>Bootstrap website</title>
 </head>
 <body>
+    <!-- Creacion del Navbar con bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="img/Logo.png" alt="Logo Chronoded" style="width: 15%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+     </div>
+    </nav>
     
+    <!-- Header -->
+    <header class="main-header">
+        <div class="background-overlay text-white py-5">       <!-- pone color encima a la imagen, aqui ponemos el texto en blanco y un padding de 5 con clases de bootstrap -->
+            <div class="container">
+                <div class="row">                                           <!--   se divide el div contenedor en 6 columnas       -->
+                    <div class="col-md-6 text-center justify-content-center align-self-center">     <!--  Acomodo de texto  -->
+                        <h1>This is a Tittle about the Product</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, iste.</p>
+                        <a href="#" class="btn btn-outline-secondary btn-lg text-white">                 <!-- creacion de boton, (btn-outline-secondary=borde y color) lg(tamaño) y -->
+                            Read More
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/Coraline.jpg" alt="Imagen de libro de coraline"
+                        class="img-fluid d-none d-sm-block" style="width: 60%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NewsLetter -->
+     <!-- Se crea un pequeño formulario utilizando un container con una fila y 3 columnas  -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control-lg" placeholder="Enter your Name">
+                </div>
+                <div class="col-md-4">
+                    <input type="email" class="form-control-lg" placeholder="Enter your Email">
+                </div>
+                <div class="col-md-4">                                                   <!--Boton estilizado -->
+                    <button class="btn btn-primary btn-lg btn-block">
+                        Suscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caracteristicas -->
+     <!-- Se crean 4 tarjetas con caracteristicas  -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h3> Feature One</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-primary text-white">
+                        <div class="card-body">
+                            <h3> Feature Two</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h3> Feature One</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-primary text-white">
+                        <div class="card-body">
+                            <h3> Feature Two</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="m-5">
+                    <h3>Why this Product?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ab ducimus delectus magni fugit, est in non voluptatibus, incidunt veritatis, quia inventore nesciunt repellendus voluptas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acordio de preguntas -->
+    <section class="container text-center p-5">
+        <div class="row">
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Question one?
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, tempora quod optio asperiores exercitationem cumque. Commodi ratione incidunt eos porro ex maxime necessitatibus ullam dicta officiis nihil quam quas hic, odit modi tenetur provident temporibus explicabo, eligendi culpa eum ducimus!
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       Question Two?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at commodi consequatur tempora mollitia enim accusantium consectetur debitis amet recusandae, sapiente nesciunt quibusdam deleniti excepturi praesentium repudiandae distinctio libero adipisci! Numquam vel incidunt, possimus quibusdam nisi placeat ducimus! Voluptate, accusamus!
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Question Three?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit modi perferendis at mollitia. Optio voluptatum dolorum minus fugiat distinctio rem deserunt vitae doloribus quasi voluptatibus.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Question Four?
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body">
+                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque assumenda est modi, exercitationem corporis ut! At alias eius vero et ab totam itaque dolore sit neque iusto. Temporibus quia ex praesentium animi autem explicabo incidunt!
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+
+
+
+
+
+
+    <!-- Agregamos javascripts de bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
